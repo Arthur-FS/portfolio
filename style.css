@@ -7,8 +7,8 @@
     padding: 0;
     list-style: none;
     text-decoration: none;
+    overflow-x: hidden;
 }
-
 :root {
     --font-primary: "Baloo Da 2", serif;
     --font-secundary: "Josefin Slab", serif;
@@ -19,11 +19,14 @@ html {
     scroll-behavior: smooth;
 }
 
+/*************
+    HAMBURGUER
+**************/
 .hamburguer {
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 200;
     right: 2rem;
     top: 2rem;
     display: flex;
@@ -34,6 +37,7 @@ html {
 
 .show-menu .hamburguer {
     right: 14rem;
+    transition: 2s;
 }
 
 .line {
@@ -57,6 +61,10 @@ html {
     transform: rotate(-50deg) translate(0.15rem, -0.5rem);
 }
 
+
+/*********
+    HOME
+**********/
 header {
     width: 100%;
     height: 100vh;
@@ -92,6 +100,7 @@ header {
     position: absolute;
     top: 15%;
     left: 10%;
+    overflow: hidden;
 }
 
 .banner h1 {
@@ -104,6 +113,7 @@ header {
     margin-bottom: 2rem;
     opacity: 0;
     animation: moveBanner 2.5s 0.5s forwards;
+    overflow: hidden;
 }
 
 .banner h3 {
@@ -142,6 +152,10 @@ header {
     }
 }
 
+
+/********
+    MENU
+*********/
 .sidebar {
     width: 18rem;
     height: 100vh;
@@ -206,11 +220,17 @@ header {
     color: #fff;
 }
 
+
+/*****************
+    CONHECIMENTOS
+******************/
 .conhecimentos {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(6, 4rem);
     row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .conhecimento:nth-child(1) {
@@ -250,6 +270,7 @@ header {
     background-size: cover;
     width: 100%;
     opacity: 0.9; */
+    overflow: hidden;
 }
 
 .sessao-header {
@@ -288,6 +309,13 @@ header {
     margin-top: 1rem;
 }
 
+.conhecimento-text p {
+    max-width: 25ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
  .conhecimentos-img-wrapper {
     grid-column: 7 / 11;
     grid-row: 2 / 6;
@@ -300,6 +328,10 @@ header {
     opacity: 0.5;
 }
 
+
+/************
+    PROJETOS
+*************/
 .sessao-projetos {
     height: 100vh;
 }
@@ -321,6 +353,7 @@ header {
     height: 100%;
     border-radius: .5rem;
     background-color: #262626;
+    overflow: hidden;
 }
 
 .card-img-wrapper img {
@@ -330,6 +363,7 @@ header {
     border-radius: .5rem;
     opacity: .8;
     transition: opacity .3s;
+    overflow: hidden;
 }
 
 .card:hover .card-img-wrapper img {
@@ -360,6 +394,10 @@ header {
     font-weight: 400;
     width: 80%;
     margin-bottom: 2rem;
+    max-width: 12ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .btn {
@@ -386,6 +424,10 @@ header {
     visibility: visible;
 }
 
+
+/***********
+    CONTATO
+************/
 .sessao-contato {
     width: 100%;
     height: 100vh;
@@ -482,6 +524,10 @@ header {
 
 }
 
+
+/**********
+    FOOTER
+***********/
 footer {
     width: 100%;
     height: 3rem;
@@ -513,6 +559,10 @@ footer {
     display: flex;
 }
 
+
+/*************
+    LINK-TOPO
+**************/
 #link-topo {
     position: fixed;
     right: 3rem;
@@ -528,5 +578,5 @@ footer {
     align-items: center;
     color: #eee;
     border-radius: .3rem;
-    box-shadow: 0 0 .1rem 0.6rem #00000009;
+    /* box-shadow: 0 0 .1rem 0.6rem #00000009; */
 }
