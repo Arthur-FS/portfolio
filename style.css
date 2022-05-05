@@ -33,11 +33,12 @@ html {
     flex-direction: column;
     justify-content: space-evenly;
     cursor: pointer;
+    transition: 2s ease;
 }
 
 .show-menu .hamburguer {
     right: 14rem;
-    transition: 2s;
+    transition: 2s ease;
 }
 
 .line {
